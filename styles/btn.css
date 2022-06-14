@@ -1,0 +1,19 @@
+.btn {
+  @apply px-6 text-white cursor-pointer;
+
+  &_half-round {
+    @apply rounded-md;
+  }
+
+  &_full-round {
+    @apply rounded-full;
+  }
+}
+
+.btn-green {
+  @apply bg-green hover:bg-light-green;
+}
+
+.btn-blue {
+  @apply bg-dark-blue;
+}
