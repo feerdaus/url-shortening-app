@@ -1,7 +1,9 @@
 import { Layout } from "@components/common";
+import { Hero } from "@components/home";
+import { Container } from "@components/ui";
 
 const Home = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return <Hero />;
 };
 
 Home.Layout = Layout;
