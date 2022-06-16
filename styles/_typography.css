@@ -1,0 +1,16 @@
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+h1 {
+  font-size: 42px !important;
+  line-height: 48px;
+  font-weight: 700 !important;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 80px !important;
+    line-height: 90px;
+  }
+}

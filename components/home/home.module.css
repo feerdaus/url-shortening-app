@@ -1,0 +1,13 @@
+.hero {
+  &_txt {
+    max-width: 565px;
+  }
+  &_s_img {
+    width: 351px;
+    height: 337px;
+  }
+  &_l_img {
+    width: 610px;
+    height: 482px;
+  }
+}

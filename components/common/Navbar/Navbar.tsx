@@ -5,7 +5,7 @@ import { Container } from "../../ui";
 
 const Drawer = ({ setIsOpen }) => {
   return (
-    <aside className="absolute w-full j-btw z-50 md:hidden px-4  ">
+    <aside className="absolute w-full j-btw z-50 md:hidden px-4 bg-white">
       <div className="w-full ">
         <div className="w-full a-center-j-btw py-14">
           <Link href="/">
@@ -16,7 +16,7 @@ const Drawer = ({ setIsOpen }) => {
           <div
             onClick={() => setIsOpen(false)}
             arial-label="Close mobile menu"
-            className="md:hidden cursor-pointer text-grey"
+            className="md:hidden cursor-pointer text-grey p-2"
           >
             <CloseIcon />
           </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
       <Container>
         <nav className="j-btw  py-14">
           <div className="a-center-j-btw w-full">
-            <div className="w-full md:w-1/2 a-center-j-btw">
+            <div className="w-full md:w-1/3 a-center-j-btw">
               <Link href="/">
                 <a className="pr-4">
                   <Logo />

@@ -11,7 +11,7 @@
 }
 
 .btn-green {
-  @apply bg-green hover:bg-light-green;
+  @apply bg-green px-8 hover:bg-light-green;
 }
 
 .btn-outlined {
