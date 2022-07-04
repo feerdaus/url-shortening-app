@@ -23,13 +23,13 @@ const Drawer = ({ setIsOpen }) => {
         </div>
         <div className="mx-auto text-center rounded-2xl text-white font-semibold bg-dark-blue py-14 px-4">
           <Link href="/">
-            <a className="mb-6 block hover:text-grey">Features</a>
+            <a className="mb-6 block hover:text-grey dark-point">Features</a>
           </Link>
           <Link href="/">
-            <a className="mb-6 block hover:text-grey">Pricing</a>
+            <a className="mb-6 block hover:text-grey dark-point">Pricing</a>
           </Link>
           <Link href="/">
-            <a className="mb-6 block hover:text-grey">Resources</a>
+            <a className="mb-6 block hover:text-grey dark-point">Resources</a>
           </Link>
           <hr />
           <div className="mt-6 ">
@@ -74,13 +74,13 @@ const Navbar = () => {
               </div>
               <div className="hidden md:block">
                 <Link href="/">
-                  <a className="px-6 text-grey hover:text-black">Features</a>
+                  <a className="px-6 text-grey dark-point">Features</a>
                 </Link>
                 <Link href="/">
-                  <a className="px-6 text-grey hover:text-black">Pricing</a>
+                  <a className="px-6 text-grey dark-point">Pricing</a>
                 </Link>
                 <Link href="/">
-                  <a className="px-6 text-grey hover:text-black">Resources</a>
+                  <a className="px-6 text-grey dark-point">Resources</a>
                 </Link>
               </div>
             </div>

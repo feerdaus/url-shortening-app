@@ -1,23 +1,13 @@
 .btn {
-  @apply px-4 py-2 text-white cursor-pointer;
+  @apply px-4 py-3 text-white cursor-pointer;
 
-  &-half-round {
-    @apply rounded-md;
+  &-green {
+    @apply bg-green px-8 hover:bg-light-green rounded-full;
   }
-
-  &-full-round {
-    @apply rounded-full;
+  &-outlined {
+    @apply hover:bg-light-grey;
   }
-}
-
-.btn-green {
-  @apply bg-green px-8 hover:bg-light-green;
-}
-
-.btn-outlined {
-  @apply hover:bg-light-grey;
-}
-
-.btn-blue {
-  @apply bg-dark-blue;
+  &-blue {
+    @apply bg-dark-blue;
+  }
 }

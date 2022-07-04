@@ -1,3 +1,13 @@
 export { default as Logo } from "./logo";
 export { default as MenuIcon } from "./MenuIcon";
 export { default as CloseIcon } from "./CloseIcon";
+export { default as BrandRecog } from "./BrandRecog";
+export { default as Records } from "./Records";
+export { default as Customize } from "./Customize";
+export { default as Divider } from "./Divider";
+export { default as VerticalDivide } from "./VerticalDivide";
+export { default as WhiteLogo } from "./WhiteLogo";
+export { default as Facebook } from "./Facebook";
+export { default as Twitter } from "./Twitter";
+export { default as Pinterest } from "./Pinterest";
+export { default as Instagram } from "./Instagram";

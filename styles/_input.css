@@ -1,0 +1,15 @@
+.form-control {
+  @apply block  w-full focus:outline-none border border-green;
+  transition: box-shadow, border-color 500ms ease-in-out;
+
+  &-error {
+    @apply block  w-full focus:outline-none border border-red;
+    padding: 10px 12px;
+    color: #ffa3a3;
+  }
+}
+
+.form-control:focus {
+  box-shadow: rgb(178, 239, 239) 0 0 0 0.2rem;
+  border-color: #2bd0d0;
+}

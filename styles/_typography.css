@@ -8,9 +8,35 @@ h1 {
   font-weight: 700 !important;
 }
 
+h2 {
+  font-size: 28px !important;
+  line-height: 48px;
+  font-weight: 700 !important;
+}
+
+.f-40-48 {
+  font-size: 28px;
+}
+
+.f-22-36 {
+  font-size: 18px;
+  line-height: 30px;
+}
 @media (min-width: 900px) {
   h1 {
     font-size: 80px !important;
     line-height: 90px;
+  }
+  h2 {
+    font-size: 40px !important;
+  }
+  .f-22-36 {
+    font-size: 22px;
+    line-height: 36px;
+    max-width: 540px;
+  }
+  .f-40-48 {
+    font-size: 40px;
+    line-height: 48px;
   }
 }

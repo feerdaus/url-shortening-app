@@ -1,4 +1,7 @@
 .hero {
+  height: 80vh;
+  min-height: 780px;
+
   &_txt {
     max-width: 565px;
   }
@@ -10,4 +13,28 @@
     width: 610px;
     height: 482px;
   }
+}
+
+@media (min-width: 900px) {
+  .hero {
+    height: 100vh;
+    min-height: 750px;
+  }
+}
+@media (min-width: 1200px) {
+  .hero {
+    height: 700px;
+  }
+}
+
+.input_bg {
+  background-image: url(https://ik.imagekit.io/4woq8zlkh/url-landing-page/SmallBg_gK7ddgXyj.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656579995523);
+  background-size: cover;
+}
+
+.boost_bg {
+  background-image: url(https://ik.imagekit.io/4woq8zlkh/url-landing-page/largeBg_WE4Ty-H2p.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656579997110);
+  background-size: cover;
+  max-height: 300px;
+  height: 100%;
 }

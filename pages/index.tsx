@@ -1,9 +1,19 @@
 import { Layout } from "@components/common";
-import { Hero } from "@components/home";
-import { Container } from "@components/ui";
+import {
+  AdvancedStatistics,
+  BoostLink,
+  Hero,
+  UrlInput,
+} from "@components/home";
 
 const Home = () => {
-  return <Hero />;
+  return (
+    <>
+      <Hero />
+      <AdvancedStatistics />
+      <BoostLink />
+    </>
+  );
 };
 
 Home.Layout = Layout;
