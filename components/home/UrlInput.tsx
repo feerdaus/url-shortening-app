@@ -80,7 +80,10 @@ const UrlInput = () => {
       {Boolean(links && links.length) &&
         links.map((link, index) => {
           return (
-            <div className="md:flex md:items-center md:justify-between bg-white p-4 mb-6 rounded-lg">
+            <div
+              key={`${link}-${index}`}
+              className="md:flex md:items-center md:justify-between bg-white p-4 mb-6 rounded-lg"
+            >
               <p className="f-22-36 border-b w-2/3 border-b-light-grey md:border-0 pb-2">
                 {olinks[index]}
               </p>
