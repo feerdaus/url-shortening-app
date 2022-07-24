@@ -33,7 +33,7 @@ const Drawer = ({ setIsOpen }) => {
           </Link>
           <hr />
           <div className="mt-6 ">
-            <button className="btn mx-auto block mb-4 text-white font-semibold btn-full-round">
+            <button className="btn mx-auto block mb-4 text-white font-semibold rounded-full">
               Login
             </button>
             <button className="px-8 py-2 btn-full-round btn-green">
@@ -86,7 +86,7 @@ const Navbar = () => {
             </div>
 
             <div className="hidden md:flex">
-              <button className="btn btn-outlined mr-4 text-grey btn-full-round">
+              <button className="btn btn-outlined mr-4 text-grey rounded-full">
                 Login
               </button>
               <button className="btn btn-full-round btn-green">Sign Up</button>

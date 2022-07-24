@@ -10,10 +10,9 @@ import {
 
 const AdvancedStatistics = () => {
   return (
-    <section className="relative bg-light-grey">
-      <div className="absolute w-full -top-20 md:-top-12">
-        <UrlInput />
-      </div>
+    <section className="bg-light-grey">
+      <UrlInput />
+
       <Container>
         <div className="pb-14 pt-40">
           <div className="mx-auto text-center max-w-lg px-4 pb-14">

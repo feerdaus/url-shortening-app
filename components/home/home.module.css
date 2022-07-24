@@ -15,10 +15,17 @@
   }
 }
 
+.form {
+  min-height: 120px;
+}
+
 @media (min-width: 900px) {
   .hero {
     height: 100vh;
     min-height: 750px;
+  }
+  .form {
+    min-height: 90px;
   }
 }
 @media (min-width: 1200px) {
