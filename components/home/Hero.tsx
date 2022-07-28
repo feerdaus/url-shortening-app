@@ -4,8 +4,10 @@ import styles from "./home.module.css";
 
 const Hero = () => {
   return (
-    <Container className={`${styles.hero}`}>
-      <div className={`a-center flex-col md:flex-row-reverse py-14 `}>
+    <Container>
+      <div
+        className={`a-center flex-col md:flex-row-reverse py-14 lg:mb-28 ${styles.hero}`}
+      >
         <div>
           <div className={`mx-auto mb-8 lg:hidden ${styles.hero_s_img}`}>
             <Image

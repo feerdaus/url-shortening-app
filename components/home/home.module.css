@@ -1,6 +1,6 @@
 .hero {
-  height: 80vh;
-  min-height: 780px;
+  height: 100vh;
+  min-height: 850px;
 
   &_txt {
     max-width: 565px;
@@ -21,8 +21,7 @@
 
 @media (min-width: 900px) {
   .hero {
-    height: 100vh;
-    min-height: 750px;
+    min-height: 650px;
   }
   .form {
     min-height: 90px;
@@ -30,7 +29,7 @@
 }
 @media (min-width: 1200px) {
   .hero {
-    height: 700px;
+    height: 550px;
   }
 }
 
