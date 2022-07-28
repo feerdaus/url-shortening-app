@@ -4,16 +4,19 @@ import styles from "./home.module.css";
 import { API } from "api";
 import { useState } from "react";
 import copy from "copy-to-clipboard";
+import isURL from "validator/lib/isURL";
 
-// interface LinkProps {
-//   url: any;
-// }
+interface FormValues {
+  url?: string;
+}
 
 const UrlInput = () => {
   const [links, setLinks] = useState<string[]>([]);
   const [olinks, setOLinks] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(-Infinity);
-  const onSubmit = async (values: { url: string }) => {
+
+  const onSubmit = async (values: FormValues) => {
+    console.log("errroorr");
     try {
       const { data } = await API.get(`/shorten?url=${values.url}`);
       setOLinks(
@@ -40,6 +43,16 @@ const UrlInput = () => {
     <Container>
       <Form
         onSubmit={onSubmit}
+        validate={(values) => {
+          const errors: FormValues = {};
+
+          if (!values.url) {
+            errors.url = "url is empty";
+          } else if (!isURL(values.url)) {
+            errors.url = "Please add a valid link";
+          }
+          return errors;
+        }}
         render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit} className={`relative ${styles.form}`}>
             <Field name="url">
@@ -59,20 +72,18 @@ const UrlInput = () => {
                       type="url"
                       placeholder="Shorten a link here.."
                     />
+                    {meta.error && meta.touched && (
+                      <span className="text-red">{meta.error}</span>
+                    )}
                   </div>
                   <button
                     type="submit"
-                    className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 "
+                    className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 h-13"
                   >
                     Shorten it!
                   </button>
                 </div>
               )}
-              {/* {meta.error && meta.touched && (
-                    <span className={meta.error ? "text-red" : "hidden"}>
-                      {meta.error}
-                    </span>
-                  )} */}
             </Field>
           </form>
         )}

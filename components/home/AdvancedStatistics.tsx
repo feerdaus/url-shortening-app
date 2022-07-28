@@ -34,9 +34,9 @@ const AdvancedStatistics = () => {
                 <span className="absolute -top-10 right-32 md:left-4">
                   <BrandRecog />
                 </span>
-                <h4 className="mb-2 f-22-36 text-black font-bold">
+                <h3 className="mb-2 f-22-36 text-black font-bold">
                   Brand Recognition
-                </h4>
+                </h3>
                 <p className="text-grey">
                   Boost your brand recognition with each click. Generic links
                   don’t mean a thing. Branded links help instil confidence in
@@ -49,9 +49,9 @@ const AdvancedStatistics = () => {
                 <span className="absolute -top-10 right-32 md:left-4">
                   <Records />
                 </span>
-                <h4 className="mb-3 f-22-36 text-black font-bold">
+                <h3 className="mb-3 f-22-36 text-black font-bold">
                   Detailed Records
-                </h4>
+                </h3>
                 <p className="text-grey">
                   Gain insights into who is clicking your links. Knowing when
                   and where people engage with your content helps inform better
@@ -64,9 +64,9 @@ const AdvancedStatistics = () => {
                 <span className="absolute -top-10 right-32 md:left-4">
                   <Customize />
                 </span>
-                <h4 className="mb-3 f-22-36 text-black font-bold">
+                <h3 className="mb-3 f-22-36 text-black font-bold">
                   Fully Customizable
-                </h4>
+                </h3>
                 <p className="text-grey">
                   Improve brand awareness and content discoverability through
                   customizable links, supercharging audience engagement.

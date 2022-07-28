@@ -17,7 +17,7 @@ const Footer = () => {
             <WhiteLogo />
           </span>
           <div className="md:flex md:justify-between w-fit mx-auto md:w-4/6 flex-wrap">
-            <div className="">
+            <div>
               <ul>
                 <li className="font-extrabold mb-5 mt-11 md:mt-0 text-white green-point ">
                   Features
@@ -33,7 +33,7 @@ const Footer = () => {
                 <li className="green-point mt-2">Analytics</li>
               </ul>
             </div>
-            <div className="">
+            <div>
               <ul>
                 <li className="font-extrabold mb-5 mt-8 md:mt-0 text-white green-point">
                   Resources
@@ -49,7 +49,7 @@ const Footer = () => {
                 <li className="green-point mt-2">Support</li>
               </ul>
             </div>
-            <div className="">
+            <div>
               <ul>
                 <li className="font-extrabold green-point mb-5 mt-10 md:mt-0 text-white">
                   Company
