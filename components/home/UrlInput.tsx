@@ -53,7 +53,7 @@ const UrlInput = () => {
           }
           return errors;
         }}
-        render={({ handleSubmit }) => (
+        render={({ handleSubmit, invalid, submitting }) => (
           <form onSubmit={handleSubmit} className={`relative ${styles.form}`}>
             <Field name="url">
               {({ input, meta }) => (
@@ -76,12 +76,15 @@ const UrlInput = () => {
                       <span className="text-red">{meta.error}</span>
                     )}
                   </div>
-                  <button
-                    type="submit"
-                    className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 h-13"
-                  >
-                    Shorten it!
-                  </button>
+                  <div>
+                    <button
+                      type="submit"
+                      disabled={invalid || submitting}
+                      className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 max-h-14 disabled:bg-light-grey disabled:cursor-not-allowed"
+                    >
+                      Shorten it!
+                    </button>
+                  </div>
                 </div>
               )}
             </Field>
