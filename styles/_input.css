@@ -3,9 +3,10 @@
   transition: box-shadow, border-color 500ms ease-in-out;
 
   &-error {
-    @apply block  w-full focus:outline-none border border-red;
+    @apply block  w-full focus:outline-none border;
     padding: 10px 12px;
-    color: #ffa3a3;
+    border: 3px solid #f46363;
+    color: #f46363;
   }
 }
 

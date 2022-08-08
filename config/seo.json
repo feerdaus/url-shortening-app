@@ -1,10 +1,10 @@
 {
   "title": "Url Shortening",
-  "titleTemplate": "%s - Profiteria",
-  "description": "url shortening challenge - https://www.profiteria.trade",
+  "titleTemplate": "",
+  "description": "url shortening challenge - https://url-shorten-feer.netlify.app/",
   "openGraph": {
     "title": "Url Shortening",
-    "description": "url shortening challenge - https://www.profiteria.trade",
+    "description": "url shortening challenge - https://url-shorten-feer.netlify.app/",
     "type": "website",
     "locale": "en_IE",
     "url": "https://www.profiteria.trade",

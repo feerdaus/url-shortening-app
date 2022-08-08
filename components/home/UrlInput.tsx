@@ -64,7 +64,7 @@ const UrlInput: FC = () => {
                 >
                   <div className="w-full md:w-5/6 mr-4">
                     <input
-                      className={` rounded px-4 py-3 text-black ${
+                      className={` rounded px-4 py-3 ${
                         meta.error && meta.touched
                           ? "form-control-error"
                           : "form-control"
@@ -82,7 +82,7 @@ const UrlInput: FC = () => {
                     <button
                       type="submit"
                       disabled={invalid || submitting}
-                      className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 max-h-14 disabled:bg-light-grey disabled:cursor-not-allowed"
+                      className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 max-h-14 disabled:bg-light-green  disabled:cursor-not-allowed"
                     >
                       Shorten it!&nbsp;&nbsp;
                       <Loading loading={submitting} />

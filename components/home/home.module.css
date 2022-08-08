@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  height: 80vh;
   min-height: 850px;
 
   &_txt {
@@ -21,16 +21,17 @@
 
 @media (min-width: 900px) {
   .hero {
-    min-height: 650px;
+    min-height: 600px;
+    max-height: 600px;
   }
   .form {
     min-height: 90px;
   }
 }
 @media (min-width: 1200px) {
-  .hero {
-    height: 550px;
-  }
+  /* .hero {
+    height: 100vh;
+  } */
 }
 
 .input_bg {
