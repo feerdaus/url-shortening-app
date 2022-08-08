@@ -2,26 +2,26 @@ import { Container } from "@components/ui";
 import { Field, Form } from "react-final-form";
 import styles from "./home.module.css";
 import { API } from "api";
-import { useState } from "react";
+import { FC, useState } from "react";
 import copy from "copy-to-clipboard";
 import isURL from "validator/lib/isURL";
+import { Loading } from "@components/ui";
 
 interface FormValues {
   url?: string;
 }
 
-const UrlInput = () => {
+const UrlInput: FC = () => {
   const [links, setLinks] = useState<string[]>([]);
   const [olinks, setOLinks] = useState<string[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(-Infinity);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const onSubmit = async (values: FormValues) => {
-    console.log("errroorr");
     try {
       const { data } = await API.get(`/shorten?url=${values.url}`);
       setOLinks(
         olinks && olinks.length
-          ? olinks.concat([data.result.original_link])
+          ? olinks.concat(data.result.original_link)
           : [data.result.original_link]
       );
       setLinks(
@@ -39,20 +39,22 @@ const UrlInput = () => {
     setCurrentIndex(index);
   };
 
+  const validate = (values: FormValues) => {
+    const errors: FormValues = {};
+
+    if (!values.url) {
+      errors.url = "url is empty";
+    } else if (!isURL(values.url)) {
+      errors.url = "Please add a valid link";
+    }
+    return errors;
+  };
+
   return (
     <Container>
       <Form
         onSubmit={onSubmit}
-        validate={(values) => {
-          const errors: FormValues = {};
-
-          if (!values.url) {
-            errors.url = "url is empty";
-          } else if (!isURL(values.url)) {
-            errors.url = "Please add a valid link";
-          }
-          return errors;
-        }}
+        validate={validate}
         render={({ handleSubmit, invalid, submitting }) => (
           <form onSubmit={handleSubmit} className={`relative ${styles.form}`}>
             <Field name="url">
@@ -72,17 +74,18 @@ const UrlInput = () => {
                       type="url"
                       placeholder="Shorten a link here.."
                     />
-                    {meta.error && meta.touched && (
+                    {Boolean(meta.error && meta.touched) && (
                       <span className="text-red">{meta.error}</span>
                     )}
                   </div>
-                  <div>
+                  <div className="flex">
                     <button
                       type="submit"
                       disabled={invalid || submitting}
                       className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 max-h-14 disabled:bg-light-grey disabled:cursor-not-allowed"
                     >
-                      Shorten it!
+                      Shorten it!&nbsp;&nbsp;
+                      <Loading loading={submitting} />
                     </button>
                   </div>
                 </div>

@@ -1,10 +1,5 @@
 import { Layout } from "@components/common";
-import {
-  AdvancedStatistics,
-  BoostLink,
-  Hero,
-  UrlInput,
-} from "@components/home";
+import { AdvancedStatistics, BoostLink, Hero } from "@components/home";
 
 const Home = () => {
   return (
