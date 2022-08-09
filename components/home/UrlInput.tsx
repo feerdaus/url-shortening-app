@@ -14,7 +14,7 @@ interface FormValues {
 const UrlInput: FC = () => {
   const [links, setLinks] = useState<string[]>([]);
   const [olinks, setOLinks] = useState<string[]>([]);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [currentIndex, setCurrentIndex] = useState<number>();
 
   const onSubmit = async (values: FormValues) => {
     try {
@@ -84,7 +84,7 @@ const UrlInput: FC = () => {
                       disabled={invalid || submitting}
                       className="btn bg-green btn-green rounded font-bold w-full md:w-52 mt-3 md:mt-0 max-h-14 disabled:bg-light-green  disabled:cursor-not-allowed"
                     >
-                      Shorten it!&nbsp;&nbsp;
+                      Shorten it!
                       <Loading loading={submitting} />
                     </button>
                   </div>
@@ -105,16 +105,25 @@ const UrlInput: FC = () => {
                 {olinks[index]}
               </p>
               <div className="md:flex md:items-center">
-                <p className="md:mr-4 f-22-36 my-4 text-green">{link}</p>
+                <p className="md:mr-4 f-22-36 my-4 text-green">
+                  <a
+                    href={`https://${link}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link}
+                  </a>
+                </p>
                 <button
                   onClick={() => copyToClipboard(index)}
                   className={`rounded text-white font-bold btn w-full sm:w-28 ${
-                    currentIndex >= 0 && currentIndex === index
+                    typeof currentIndex !== "undefined" &&
+                    currentIndex === index
                       ? "btn-blue"
                       : "btn-green"
                   }`}
                 >
-                  {currentIndex >= 0 && currentIndex === index
+                  {typeof currentIndex !== "undefined" && currentIndex === index
                     ? "Copied!"
                     : "Copy"}
                 </button>
@@ -127,3 +136,11 @@ const UrlInput: FC = () => {
 };
 
 export default UrlInput;
+
+// a: + tab ==> <a
+// href={`https://${link}`}
+// target="_blank"
+// rel="noopener noreferrer"
+// >
+// {link}
+// </a>
