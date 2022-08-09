@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <Container>
       <div
-        className={`a-center flex-col md:flex-row-reverse py-14 lg:mb-28 ${styles.hero}`}
+        className={`a-center flex-col md:flex-row-reverse md:justify-between py-14 lg:mb-28 ${styles.hero}`}
       >
         <div>
           <div className={`mx-auto mb-8 lg:hidden ${styles.hero_s_img}`}>
@@ -32,7 +32,7 @@ const Hero = () => {
           className={`text-center mx-auto lg:mx-0 lg:w-1/2 md:text-left md:ml-0 ${styles.hero_txt}`}
         >
           <h1>More than just shorter links</h1>
-          <p className="f-22-36 text-dark-grey my-6">
+          <p className="f-20-32 text-dark-grey my-6">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>

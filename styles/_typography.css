@@ -3,8 +3,8 @@
 }
 
 h1 {
-  font-size: 42px !important;
-  line-height: 48px;
+  font-size: 30px !important;
+  line-height: 42px;
   font-weight: 700 !important;
 }
 
@@ -24,15 +24,15 @@ h2 {
 }
 @media (min-width: 900px) {
   h1 {
-    font-size: 80px !important;
-    line-height: 90px;
+    font-size: 56px !important;
+    line-height: 80px;
   }
   h2 {
     font-size: 40px !important;
   }
-  .f-22-36 {
-    font-size: 22px;
-    line-height: 36px;
+  .f-20-32 {
+    font-size: 20px;
+    line-height: 32px;
   }
   .f-40-48 {
     font-size: 40px;
